@@ -73,7 +73,7 @@ app.get('/google/callback',
         firstName: req.user.firstName,
         role: req.user.role
       },
-      "Rate-my-professor@@##",
+      "Secret Key",
       { expiresIn: '1h' } // Adjust token expiration as needed
     );
 
@@ -93,8 +93,6 @@ app.get('/google/callback',
       }
       res.clearCookie('connect.sid', { path: '/', httpOnly: true, secure: process.env.NODE_ENV === 'production', sameSite: 'strict' }); // Clear session cookie
       res.clearCookie('token', { path: '/', httpOnly: true, secure: process.env.NODE_ENV === 'production', sameSite: 'strict' }); // Clear JWT token cookie
-
-    //  res.redirect('http://localhost:5173'); // Redirect to frontend
     });
   });
 

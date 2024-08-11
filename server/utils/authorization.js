@@ -7,7 +7,7 @@ const authenticated = (req, res, next) => {
          res.redirect("/user/login");
     }
     try {
-        const decodedToken = jwt.verify(token, "Rate-my-professor@@##");
+        const decodedToken = jwt.verify(token, "Secret Key");
         req.user = { 
             firstName: decodedToken.firstName, 
             role: decodedToken.role 

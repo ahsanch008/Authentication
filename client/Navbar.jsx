@@ -38,15 +38,7 @@ const Navbar = () => {
     <>
       <nav className={`${isDarkMode ? 'bg-gray-900' : 'bg-gray-200'} p-4 shadow-lg transition-colors duration-300 sticky top-0 z-50`}>
         <div className="container mx-auto flex justify-between items-center">
-          <Link to="/" className="flex items-center space-x-2">
-            <FontAwesomeIcon
-              icon={faGraduationCap}
-              className={`text-3xl md:text-4xl ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}
-            />
-            <span className={`text-xl md:text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
-              Rate<span className="text-blue-500">Professors</span>
-            </span>
-          </Link>
+         
           <div className="flex items-center space-x-4 md:space-x-6">
             <button
               onClick={toggleDarkMode}
